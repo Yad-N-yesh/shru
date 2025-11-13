@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Shruti</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #fff7f7;
+      flex-direction: column;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #ff3366;
+      font-size: 2em;
+    }
+
+    .smiley {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      background-color: #ffcc00;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .smiley::before, .smiley::after {
+      content: '';
+      position: absolute;
+      top: 50px;
+      width: 20px;
+      height: 20px;
+      background-color: #000;
+      border-radius: 50%;
+    }
+
+    .smiley::before {
+      left: 40px;
+    }
+
+    .smiley::after {
+      right: 40px;
+    }
+
+    .smile {
+      position: absolute;
+      bottom: 40px;
+      width: 80px;
+      height: 40px;
+      border-bottom: 8px solid #000;
+      border-radius: 0 0 80px 80px;
+    }
+
+    .message {
+      display: none;
+      font-size: 1.1em;
+      color: #333;
+      max-width: 600px;
+      line-height: 1.6;
+      margin-top: 30px;
+    }
+
+    .show {
+      display: block;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>For Shruti 💛</h1>
+  <div class="smiley" id="smiley">
+    <div class="smile"></div>
+  </div>
+  <p class="message" id="message">
+    Hey Shruti, I'm truly grateful to have you in my life! ❤️<br><br>
+    We’ve just completed a year together — a year filled with laughter, late-night talks, small arguments, deep love, and unshakable connection. Through every high and low, we’ve grown stronger and closer. We fell, we rose, and we stood tall again — taller than the doubts, taller than the noise, so much that those who once tried to break us are now lost in our shadows.<br><br>
+    You are my calm after chaos, my reason to smile, and my biggest strength. Here’s to countless more years of love, growth, and togetherness — forever with you, Shruti. 💫<br><br>
+    – Yadnyesh 💛
+  </p>
+  <script>
+    const smiley = document.getElementById('smiley');
+    const message = document.getElementById('message');
+
+    smiley.addEventListener('click', () => {
+      message.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
